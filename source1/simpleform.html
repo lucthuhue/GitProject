@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Form</title>
+  <style>
+    .wufoo {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .required {
+      color: red;
+    }
+    .field-group {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <form method="get" action="simpleform.html" class="wufoo">
+    <h2>Order Form</h2>
+
+    <!-- Mục 1: Chọn sản phẩm (Select Dropdown) -->
+    <div class="field-group">
+      <label for="product"><strong>What would you like to buy?</strong></label><br>
+      <select id="product" name="product">
+        <option value="A">A</option>
+        <option value="B">B (+ 0.5$)</option>
+        <option value="C">C (+ 0.5$)</option>
+      </select>
+    </div>
+
+    <!-- Mục 2: Số lượng (Radio Buttons) -->
+    <div class="field-group">
+      <p><strong>How many would you like to order?</strong></p>
+      <input type="radio" id="qty1" name="rd" value="1">
+      <label for="qty1">1 - $10</label><br>
+
+      <input type="radio" id="qty2" name="rd" value="2">
+      <label for="qty2">2 - $20</label><br>
+
+      <input type="radio" id="qty3" name="rd" value="3">
+      <label for="qty3">3 - $25</label>
+    </div>
+
+    <!-- Mục 3: Thông tin người mua (Text inputs) -->
+    <div class="field-group">
+      <label><strong>Name</strong> <span class="required">*</span></label><br>
+      <input type="text" name="firstname" placeholder="FirstName" size="15" required>
+      <input type="text" name="lastname" placeholder="LastName" size="15" required>
+    </div>
+
+    <div class="field-group">
+      <label for="email"><strong>Email</strong></label><br>
+      <input type="email" id="email" name="email" size="35">
+    </div>
+
+    <div class="field-group">
+      <label><strong>Phone Number</strong></label><br>
+      <input type="text" name="phone1" size="5" maxlength="3"> -
+      <input type="text" name="phone2" size="5" maxlength="3"> -
+      <input type="text" name="phone3" size="5" maxlength="4">
+    </div>
+
+    <!-- Mục 4: Nút gửi (Submit Button) -->
+    <div class="field-group">
+      <input type="submit" name="btSubmit" value="Submit">
+    </div>
+  </form>
+
+</body>
+</html>
