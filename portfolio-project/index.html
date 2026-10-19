@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Trang Cá Nhân</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo">DevPortfolio<span>.</span></a>
+      <nav class="nav-menu">
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact" class="btn-nav">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">👋 Chào mừng bạn đến với trang của mình</div>
+      <h1 class="hero-title">Xây dựng giải pháp Backend vững chắc & Trải nghiệm Web hiện đại</h1>
+      <p class="hero-desc">
+        Đam mê phát triển các hệ thống phần mềm hiệu năng cao, tối ưu cơ sở dữ liệu kết hợp cùng giao diện người dùng trực quan, thân thiện.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Xem các dự án</a>
+        <a href="#contact" class="btn btn-secondary">Liên hệ ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title">Thông tin</span>
+        <h2 class="section-title">Về Bản Thân</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-card">
+          <p class="lead">
+            Xin chào! Mình là một lập trình viên phần mềm với định hướng chuyên sâu về phát triển hệ thống backend và xây dựng các sản phẩm web thực tế.
+          </p>
+          <p>
+            Mình có kinh nghiệm làm việc với kiến trúc RESTful API, thiết kế cơ sở dữ liệu quan hệ, đồng thời nắm vững quy trình phát triển linh hoạt Agile/Scrum. Bên cạnh tư duy xử lý logic hệ thống, mình luôn đề cao tính tiện dụng và sự mượt mà trong giao diện để mang lại giá trị trọn vẹn nhất cho người dùng.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Định hướng:</span>
+              <span class="info-val">Backend Developer / Full-stack Oriented</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Quy trình làm việc:</span>
+              <span class="info-val">Agile Scrum, Git Flow</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Tình trạng:</span>
+              <span class="info-val text-available">🟢 Sẵn sàng cho cơ hội mới</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title">Năng lực</span>
+        <h2 class="section-title">Kỹ Năng Kỹ Thuật</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Backend & Database</h3>
+          <ul>
+            <li>C# / ASP.NET Core Web API</li>
+            <li>MySQL / Thiết kế CSDL quan hệ</li>
+            <li>Xây dựng & Tối ưu RESTful APIs</li>
+            <li>Kiến trúc ứng dụng phân tầng</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frontend & UI/UX</h3>
+          <ul>
+            <li>HTML5 & CSS3 (Flexbox, Grid)</li>
+            <li>Thiết kế Wireframe & Prototype (Figma)</li>
+            <li>Giao diện Responsive đa thiết bị</li>
+            <li>Trực quan hóa dữ liệu</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Công cụ & Phương pháp</h3>
+          <ul>
+            <li>Git & GitHub version control</li>
+            <li>Mô hình Agile / Scrum & Kanban</li>
+            <li>Postman API testing</li>
+            <li>Giải quyết vấn đề (5 Whys, Root Cause)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title">Sản phẩm</span>
+        <h2 class="section-title">Dự Án Nổi Bật</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-body">
+            <span class="tag">Backend & Database</span>
+            <h3>Smart Bus Ticketing System</h3>
+            <p>
+              Hệ thống bán và quản lý vé xe buýt thông minh. Thiết kế cơ sở dữ liệu quan hệ, xây dựng hệ thống RESTful API xử lý đặt vé và phân hệ báo cáo doanh thu, lộ trình tuyến xe.
+            </p>
+            <div class="tech-stack">
+              <span>ASP.NET Core</span>
+              <span>MySQL</span>
+              <span>REST API</span>
+              <span>Scrum</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-body">
+            <span class="tag">UI/UX & Web</span>
+            <h3>AI Internship & Job Matching Platform</h3>
+            <p>
+              Nền tảng kết nối thực tập sinh và cơ hội việc làm thông minh. Nghiên cứu trải nghiệm người dùng, xây dựng prototype tương tác trên Figma và phát triển giao diện responsive.
+            </p>
+            <div class="tech-stack">
+              <span>Figma</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-body">
+            <span class="tag">Frontend</span>
+            <h3>Personal Developer Portfolio</h3>
+            <p>
+              Trang web giới thiệu năng lực cá nhân với thiết kế hiện đại, tinh tế, tối ưu hóa hiển thị trên mọi kích thước màn hình và triển khai trực tuyến trên Netlify.
+            </p>
+            <div class="tech-stack">
+              <span>HTML5</span>
+              <span>CSS3 Grid/Flexbox</span>
+              <span>Netlify</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Kết Nối Với Mình</h2>
+        <p>Mình luôn sẵn sàng trao đổi về các dự án hợp tác hoặc cơ hội công việc phù hợp.</p>
+        <div class="contact-links">
+          <a href="mailto:contact@example.com" class="btn btn-primary">Gửi Email Liên Hệ</a>
+          <a href="https://github.com" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 DevPortfolio. Xây dựng bằng HTML5 & CSS3. Sẵn sàng triển khai trên Netlify.</p>
+    </div>
+  </footer>
+</body>
+</html>
