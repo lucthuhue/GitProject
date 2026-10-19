@@ -1,0 +1,82 @@
+BÁO CÁO THỰC HÀNH: CĂN GIỮA HOÀN HẢO VỚI CSS FLEXBOX1. Tóm tắt các thao tác đã triển khaiKhởi tạo tệp và cấu trúc HTML (center-flex.html):Tạo tệp center-flex.html trong thư mục dự án my-first-website, liên kết tới style.css trong thẻ <head>.Tạo khối bao ngoài <div class="container"> đóng vai trò là Flex Container.Bên trong đặt khối thẻ con <div class="center-card"> đóng vai trò là Flex Item cần căn giữa.Kích hoạt Flexbox và 3 dòng CSS "thần thánh":display: flex;: Chuyển đổi .container thành mô hình Flexbox.justify-content: center;: Căn giữa phần tử con theo trục chính (Main Axis - mặc định là trục ngang từ trái sang phải).align-items: center;: Căn giữa phần tử con theo trục phụ (Cross Axis - mặc định là trục dọc từ trên xuống dưới).Thiết lập chiều cao khung nhìn (min-height: 100vh):Đặt min-height: 100vh để .container luôn chiếm trọn ít nhất $100\%$ chiều cao của màn hình trình duyệt (Viewport Height), tạo không gian dọc đủ để align-items: center phát huy tác dụng.Định dạng thẻ Card trung tâm:Đổ nền trắng (#ffffff), bo góc tròn mềm mại border-radius: 12px, tạo bóng mờ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), và căn giữa văn bản text-align: center.Kiểm thử hành vi Responsive:Mở tệp với Live Server, thay đổi kích thước cửa sổ trình duyệt (thu nhỏ, phóng to, kéo dãn); khối .center-card luôn tự động tính toán lại và giữ vững vị trí chính giữa màn hình mà không bao giờ bị lệch hay vỡ giao diện.2. Toàn bộ mã nguồn hoàn chỉnhTệp center-flex.html:HTML<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuyệt Chiêu Căn Giữa Hoàn Hảo Với Flexbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Flex Container bao trọn màn hình -->
+  <div class="container">
+    <!-- Flex Item nằm chính giữa -->
+    <div class="center-card">
+      <h3>Căn giữa hoàn hảo!</h3>
+      <p>Phần tử này luôn nằm chính giữa khung nhìn màn hình.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+Tệp style.css:CSS/* ==========================================================================
+   1. RESET & THIẾT LẬP NỀN TẢNG
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #334155;
+}
+
+/* ==========================================================================
+   2. 3 DÒNG CỐT LÕI CĂN GIỮA VỚI FLEXBOX
+   ========================================================================== */
+
+.container {
+  min-height: 100vh;           /* Chiếm trọn 100% chiều cao màn hình */
+  display: flex;               /* [Dòng 1] Kích hoạt Flexbox */
+  justify-content: center;     /* [Dòng 2] Căn giữa theo trục ngang */
+  align-items: center;         /* [Dòng 3] Căn giữa theo trục dọc */
+  background-color: #f0f2f5;   /* Màu nền xám dịu mắt */
+}
+
+/* ==========================================================================
+   3. ĐỊNH DẠNG THẺ CARD NỔI BẬT
+   ========================================================================== */
+
+.center-card {
+  padding: 35px 40px;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  border-top: 4px solid #0284c7; /* Đường chỉ viền xanh điểm nhấn */
+}
+
+.center-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.5rem;
+  color: #0f172a;
+}
+
+.center-card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+3. Bảng phân tích cơ chế trục trong FlexboxThuộc tínhHướng tác động (Mặc định flex-direction: row)Ý nghĩa & Vai tròdisplay: flexToàn bộ khối cha .containerBiến đổi container thành môi trường Flex Formatting Context, các phần tử con trực tiếp trở thành flex items.justify-content: centerTrục chính (Main Axis - Trục X)Gom toàn bộ flex item vào tâm điểm giữa theo chiều ngang (trái sang phải).align-items: centerTrục phụ (Cross Axis - Trục Y)Căn chỉnh flex item vào chính giữa theo chiều cao (trên xuống dưới).min-height: 100vhChiều cao của .containerNếu không có 100vh, container sẽ chỉ cao bằng đúng nội dung card, khiến việc căn giữa theo chiều dọc không có khoảng trống để hiển thị.4. Ghi chú so sánh & Góc nhìn mở rộngSo với cách làm truyền thống (Margin Auto / Absolute Positioning):Kỹ thuật cũ căn giữa tuyệt đối phải dùng position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); khá phức tạp và dễ xung đột z-index.Flexbox chỉ cần 3 thuộc tính áp dụng trực tiếp lên thẻ cha mà không cần can thiệp toạ độ của thẻ con.Mẹo "1 dòng" với CSS Grid (Cách tiếp cận thay thế): Bạn cũng có thể đạt kết quả căn giữa tương đương với CSS Grid bằng:CSS.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center; /* Tự động căn giữa cả ngang lẫn dọc chỉ trong 1 dòng */
+}
