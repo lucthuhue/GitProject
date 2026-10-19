@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Thời Khóa Biểu - Gộp Ô</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 25px;
+      background-color: #f8fafc;
+    }
+    h2 {
+      color: #1e3a8a;
+    }
+    table {
+      border-collapse: collapse;
+      width: 480px;
+      margin-top: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    th, td {
+      border: 1px solid #334155;
+      padding: 10px 14px;
+      text-align: center;
+    }
+    th {
+      background-color: #e2e8f0;
+      color: #0f172a;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Thời khóa biểu</h2>
+
+  <table border="1">
+    <tr>
+      <th>Thứ</th>
+      <th>Môn học</th>
+      <th>Giáo viên</th>
+    </tr>
+    <tr>
+      <!-- Gộp 2 hàng theo chiều dọc -->
+      <td rowspan="2">Thứ Hai</td>
+      <td>Toán</td>
+      <td>Thầy Nam</td>
+    </tr>
+    <tr>
+      <!-- Dòng này bỏ bớt 1 ô td vì ô Thứ Hai đã chiếm -->
+      <td>Văn</td>
+      <td>Cô Hạnh</td>
+    </tr>
+    <tr>
+      <td>Thứ Ba</td>
+      <!-- Gộp 2 cột theo chiều ngang -->
+      <td colspan="2">Nghỉ học</td>
+    </tr>
+  </table>
+
+</body>
+</html>
